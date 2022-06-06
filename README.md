@@ -4,7 +4,7 @@ DecentraNet is an open source project which aims to create decentralized and ano
 
 # How does this project accomplish its goal?
 
-Currently this project does not complete its goal of even creating a small scale network between devices
+Currently it cannot hop between devices but it can do a direct connection betweenm nerby devices
 
 # How will it work?
 
