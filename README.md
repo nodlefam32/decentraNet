@@ -8,4 +8,4 @@ Currently this project does not complete its goal of even creating a small scale
 
 # How will it work?
 
-Devices will assign their own ip addresses to themselves and talk to each other with their WiFi chips.
+Devices will assign their own ip addresses to themselves in a way which lets them talk to each other using minimal addresses
