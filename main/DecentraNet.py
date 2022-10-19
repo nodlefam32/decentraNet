@@ -26,19 +26,6 @@ class decentraNet:
         self.listen = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     def generateKeys(self):
-
-        # General introduction
-        print("---Welcome to the decentralized IoT---")
-        print("This builds emergency IoT infrastructure")
-        print("This IoT allows you to access content as long as your device has a path to a target server")
-        print("It is possible to be temporarily blocked from the IoT")
-        print("This can also happen from an obstructed path but neither will compromise security")
-        print("All communications are insecure")
-        print("Never share your private key doing so will compromise the security of your device")
-        print("Remember sites can be spoofed CHECK KEYS ALWAYS AND THIS DOES NOT GUARANTEE INTEGRITY")
-        print("Checking for existence of private and public keys these are required to browse")
-        print("To get a new identity delete the private and public key files.")
-
         # Read old pair if one does exist
         if os.path.exists("private.key") and os.path.exists("public.key") and self.anonymousMode is False:
             with open("private.key", "rb") as f:
@@ -138,7 +125,7 @@ class decentraNet:
 if __name__ == '__main__':
     PORT = 1050
     anonymousMode = True
-    networkingDevice = 'eno1'
+    networkingDevice = input("Please enter the networking interface to work from")
     net = decentraNet(anonymousMode, PORT, networkingDevice)
     net.configureNetworkDevice(networkingDevice)
     net.generateKeys()
@@ -146,12 +133,3 @@ if __name__ == '__main__':
     net.listenForDevices()
 else:
     exit("You cannot import DecentraNet.")
-
-"""
---- Decentralized mode ---
-We start out by assigning ourselves the ip 192.168.1.1
-We then configure the network card
-We then scan the network for live devices
-Bam we can use the network and access its services but remember to trade keys lol
-"""
-
